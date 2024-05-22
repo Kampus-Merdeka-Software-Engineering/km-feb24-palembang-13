@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Superstore</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+  </head>
+  <body>
+    <div class="sidebar">
+      <div class="logo">
+        <img src="Logo Capstone Putih.png" />
+      </div>
+      <ul class="nav-links"> 
+        <li>
+          <a href="#">
+            <i class="bx bx-grid-alt"></i>
+            <span class="links_name">Home</span>
+          </a>
+        </li>
+        <li>
+          <a href="source.html">
+            <i class="bx bx-folder-open"></i>
+            <span class="links_name">Source</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bx-bar-chart-alt-2"></i>
+            <span class="links_name">Statistical</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bx-user-circle"></i>
+            <span class="links_name">About Us</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <section class="home-section">
+      <nav>
+        <div class="sidebar-button">
+          <i class="bx bx-menu sidebarBtn"></i>
+          <span class="dashboard">Dashboard</span>
+        </div>
+      </nav>
+      <div class="home-content">
+        <div class="overview-boxes">
+          <div class="box">
+            <div class="right-side">
+              <div class="box-topic">Total Customer</div>
+              <div class="description">793</div>
+            </div>
+          </div>
+          <div class="box">
+            <div class="right-side">
+              <div class="box-topic">Revenue</div>
+              <div class="description">$2.297.201</div>
+            </div>
+          </div>
+          <div class="box">
+            <div class="right-side">
+              <div class="box-topic">Profit Margin</div>
+              <div class="description">286.397</div>
+            </div>
+          </div>
+        </div>
+        <div class="bottom">
+          <div class="overview-boxes2">
+            <div class="source">
+              <div class="box">
+                <div class="right-side">
+                  <div class="box-topic">Dataset</div>
+                  <div class="description">Open Folder</div>
+                </div>
+                <div class="button">
+                  <a
+                    href="https://www.kaggle.com/datasets/vivek468/superstore-dataset-final/data"
+                    >Buka</a
+                  >
+                </div>
+              </div>
+              <div class="box">
+                <div class="right-side">
+                  <div class="box-topic">Looker Studio</div>
+                  <div class="description">Open Folder</div>
+                </div>
+                <div class="button">
+                  <a
+                    href="https://lookerstudio.google.com/reporting/a7b86b9d-b913-4dcf-b0a3-6ee80125297d/page/ROpvD"
+                    >Buka</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="chart">
+              <div class="sales">
+                <div class="recent-sales box">
+                  <div class="title">Reports</div>
+                  <div class="sales-details">
+                    <div id="chartContainer" style="height: 300px; width: 50%">
+                      <script>
+                        var script1 = document.createElement("script");
+                        script1.src = "chart1.js"; // Mengatur path (alamat) ke file JavaScript pertama
+                        document
+                          .getElementById("chartContainer")
+                          .appendChild(script1);
+                      </script>
+                    </div>
+                    <div id="tableContainer">
+                      <table id="table">
+                        <tr>
+                          <th onclick="sortTable(0)">Product Name</th>
+                          <th onclick="sortTable(1)">ROI</th>
+                        </tr>
+                        <tr>
+                          <td>I.R.I.S IRISCard Anywhere 5 Card Scanner</td>
+                          <td>4.33</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Noneywell Enviracaire Portable HEPA Air Cleaner
+                          </td>
+                          <td>2.03</td>
+                        </tr>
+                        <tr>
+                          <td>Honeywell Quietcate Hepa Air Cleaner</td>
+                          <td>2.02</td>
+                        </tr>
+                        <tr>
+                          <td>Alphabetical Labels for Top Tab Filling</td>
+                          <td>1.88</td>
+                        </tr>
+                        <tr>
+                          <td>Avery 505</td>
+                          <td>1.88</td>
+                        </tr>
+                        <tr>
+                          <td>Avery 490</td>
+                          <td>1.88</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            Recycled Interoffice Envelopes with String and
+                            Button Closure
+                          </td>
+                          <td>1.88</td>
+                        </tr>
+                        <tr>
+                          <td>Memo Book</td>
+                          <td>1.88</td>
+                        </tr>
+                        <tr>
+                          <td>netTALK DUO VoIP Telephone Service</td>
+                          <td>1.88</td>
+                        </tr>
+                        <tr>
+                          <td>Unpadded Memo Slips</td>
+                          <td>1.87</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            White Business Envelopes with Contemporary Seam
+                          </td>
+                          <td>1.87</td>
+                        </tr>
+                        <tr>
+                          <td>Prang Dustless Chalk Sticks</td>
+                          <td>1.87</td>
+                        </tr>
+                        <tr>
+                          <td>Xerox 1942</td>
+                          <td>1.87</td>
+                        </tr>
+                        <tr>
+                          <td>Southworth 100% Cotton The Best Paper</td>
+                          <td>1.87</td>
+                        </tr>
+                        <tr>
+                          <td>
+                            "While you Were Out" Message Book, One Form per Page
+                          </td>
+                          <td>1.87</td>
+                        </tr>
+                      </table>
+                      <script src="table.js"></script>
+                    </div>
+                  </div>
+                  <div class="button">
+                    <a
+                      href="https://lookerstudio.google.com/reporting/a7b86b9d-b913-4dcf-b0a3-6ee80125297d/page/ROpvD"
+                      >Open Folder</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="top-sales box">
+            <div class="title">Recent Orders</div>
+            <div class="top-sales-details">
+              <ul>
+                <li>
+                  <a href="#">
+                    <span class="name">Claire Gute - 11/8/2016</span><br />
+                    <span class="product"
+                      >Bush Somerest Collection Bookcase</span
+                    >
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span class="name">Claire Gute - 11/8/2016 </span><br />
+                    <span class="product"
+                      >Hon Deluxe Fabric Upholstered Stacking Chairs, Rounded
+                      Back</span
+                    >
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span class="name">Darrin Van Huff - 6/12/2016</span><br />
+                    <span class="product"
+                      >Self-Adhesive Address Labels for Typewriters
+                      byuniversal</span
+                    >
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span class="name">Sean 0'Donnell - 10/11/2015</span><br />
+                    <span class="product"
+                      >Bretford CR4500 Series Slim Rectangular Table</span
+                    >
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span class="name">Brosina Hoffman - 6/9/2014</span><br />
+                    <span class="product"
+                      >Eldon Expressions Wood and Plastic Desk Accessories,
+                      CherryWood</span
+                    >
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="bottom2">
+          <div class="report1">
+            <div class="head">
+              <img src="shopping-cart.png" />
+              <div class="content">
+                <div class="box-topic">Reports</div>
+                <div class="description">Top Selling Product</div>
+              </div>
+            </div>
+            <img class="doc" src="Top selling.png" />
+          </div>
+          <div class="report2">
+            <div class="head">
+              <img src="price-tag.png" />
+              <div class="content">
+                <div class="box-topic">Reports</div>
+                <div class="description">Top Product Needs and Preferences</div>
+              </div>
+            </div>
+            <img class="doc" src="Top product.png" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      let sidebar = document.querySelector(".sidebar");
+      let sidebarBtn = document.querySelector(".sidebarBtn");
+      sidebarBtn.onclick = function () {
+        sidebar.classList.toggle("active");
+        if (sidebar.classList.contains("active")) {
+          sidebarBtn.classList.replace("bx-menu", "bx-menu-alt-right");
+        } else sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+      };
+    </script>
+  </body>
+</html>
