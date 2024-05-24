@@ -261,8 +261,8 @@ td {
 
 /* Right box */
 .home-content .bottom .top-sales {
-  width: 31%;
-  height: 510px;
+  width: 30%;
+  height: 540px;
   background: #fff;
   margin-top: 20px;
   border-radius: 12px;
@@ -315,8 +315,7 @@ td {
 }
 
 .bottom2 .report1 {
-  width: 40%;
-  display: flex;
+  width: 100%;
   justify-content: space-between;
   align-items: center;
   background: #fff;
@@ -328,8 +327,7 @@ td {
 }
 
 .bottom2 .report2 {
-  width: 57%;
-  display: block;
+  width: 100%;
   justify-content: space-between;
   align-items: center;
   background: #fff;
@@ -337,13 +335,68 @@ td {
   border-radius: 12px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   margin-left: 20px;
+  display: block;
 }
 .head {
   display: flex;
 }
-.bottom2 .doc {
-  width: 95%;
+.head i{
+  font-size: 50px;
 }
+.bottom2 .doc {
+  width: 90%;
+}
+/* topSelling */
+.bottom2 .tableTopSelling table,
+.bottom2 .TopProductNeedsandPreferences table{
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0
+  scr
+}
+
+.bottom2 .tableTopSelling th, .bottom2 .tableTopSelling td,
+.bottom2 .TopProductNeedsandPreferences th, .bottom2 .TopProductNeedsandPreferences td{
+  font-size: 10px;
+  padding: 15px;
+  border: 1px solid #ddd;
+}
+.bottom2 .tableTopSelling th,
+.bottom2 .TopProductNeedsandPreferences th {
+  background-color: #f2f2f2;
+}
+.bottom2 .tableTopSelling tbody,
+.bottom2 .TopProductNeedsandPreferences tbody {
+  display: block;
+  max-height: 300px; /* Adjust this value as needed */
+  overflow-x: scroll;
+  overflow-y: scroll;
+}
+.bottom2 .tableTopSelling tbody tr,
+.bottom2 .TopProductNeedsandPreferences tbody tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+.bottom2 .tableTopSelling thead, .bottom2 .tableTopSelling tbody tr,
+.bottom2 .TopProductNeedsandPreferences thead, .bottom2 .TopProductNeedsandPreferences tbody tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+.bottom2 .tableTopSelling tr:nth-child(even),
+.bottom2 .TopProductNeedsandPreferences tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+.bottom2 .tableTopSelling tr:hover,
+.bottom2 .TopProductNeedsandPreferences tr:hover {
+  background-color: #f1f1f1;
+}
+.bottom2 .tableTopSelling th:first-child, .bottom2 .tableTopSelling td:first-child {
+  width: 50px; /* Adjust this value as needed */
+}
+/* topSelling */
+
 .bottom2  img {
   width: 45px;
 }
@@ -369,7 +422,6 @@ td {
     left: 60px;
   }
   .sidebar.active ~ .home-section {
-    /* width: calc(100% - 220px); */
     overflow: hidden;
     left: 220px;
   }
@@ -382,6 +434,7 @@ td {
     left: 220px;
   }
 }
+
 @media (max-width: 1150px) {
   .home-content .sales-boxes {
     flex-direction: column;
@@ -395,12 +448,18 @@ td {
     margin: 0;
   }
 }
+
 @media (max-width: 1000px) {
   .overview-boxes .box {
     width: calc(100% / 2 - 15px);
     margin-bottom: 15px;
   }
+  .overview-boxes2 .source .box {
+    width: 100%;
+    margin-bottom: 15px;
+  }
 }
+
 @media (max-width: 700px) {
   nav .sidebar-button .dashboard,
   nav .profile-details .admin_name,
@@ -412,13 +471,27 @@ td {
     min-width: 40px;
   }
   .home-content .sales-boxes .sales-details {
-    width: 560px;
+    width: 100%;
   }
-  .overview-boxes2 .sales-boxes .box {
+  .overview-boxes2 .box {
     display: block;
-    justify-content: space-between;
+  }
+  .overview-boxes2 .box-topic {
+    font-size: 12px;
+  }
+  .overview-boxes2 .right-side {
+    display: block;
+  }
+  .overview-boxes2 .right-side .description {
+    font-size: 10px;
+  }
+  .overview-boxes2 .button a {
+    font-size: 8px;
+    margin-top: 30px;
+    display: block;
   }
 }
+
 @media (max-width: 550px) {
   .overview-boxes .box {
     width: 100%;
@@ -427,7 +500,28 @@ td {
   .sidebar.active ~ .home-section nav .profile-details {
     display: none;
   }
+  .home-section {
+    width: 100%;
+    left: 0;
+  }
+  .home-section nav {
+    width: 100%;
+    left: 0;
+  }
+  .sidebar.active ~ .home-section {
+    left: 60px;
+    width: calc(100% - 60px);
+  }
+  .sidebar.active ~ .home-section nav {
+    left: 60px;
+    width: calc(100% - 60px);
+  }
+  .home-content .sales-boxes .sales-details {
+    width: 100%;
+    overflow-x: auto;
+  }
 }
+
 @media (max-width: 400px) {
   .sidebar {
     width: 0;
@@ -450,5 +544,60 @@ td {
   .sidebar.active ~ .home-section nav {
     left: 60px;
     width: calc(100% - 60px);
+  }
+}
+
+/* Responsive Skill Cards Grid */
+@media (max-width: 1024px) {
+  .skill-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .skill-cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/* General Mobile Styles */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+  }
+  .sidebar.active {
+    width: 100%;
+  }
+  .home-section {
+    width: 100%;
+    left: 0;
+  }
+  .sidebar.active ~ .home-section {
+    width: 100%;
+    left: 0;
+  }
+  .home-section nav {
+    width: 100%;
+    left: 0;
+  }
+  .sidebar.active ~ .home-section nav {
+    width: 100%;
+    left: 0;
+  }
+  .home-content {
+    padding-top: 60px;
+  }
+  .home-content .overview-boxes {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .overview-boxes .box,
+  .overview-boxes2 .source .box,
+  .overview-boxes2 .sales-boxes .box {
+    width: 100%;
+    margin-bottom: 15px;
   }
 }

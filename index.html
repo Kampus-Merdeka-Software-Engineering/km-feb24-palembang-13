@@ -10,6 +10,7 @@
       rel="stylesheet"
     />
     <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
   </head>
   <body>
     <div class="sidebar">
@@ -36,7 +37,7 @@
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="aboutus\aboutus.html">
             <i class="bx bx-user-circle"></i>
             <span class="links_name">About Us</span>
           </a>
@@ -195,7 +196,7 @@
                   <div class="button">
                     <a
                       href="https://lookerstudio.google.com/reporting/a7b86b9d-b913-4dcf-b0a3-6ee80125297d/page/ROpvD"
-                      >Open Folder</a
+                      style="margin-top: 30px;">Open Folder</a
                     >
                   </div>
                 </div>
@@ -250,6 +251,62 @@
                     >
                   </a>
                 </li>
+                <li>
+                  <a href="#">
+                    <span class="name">Brosina Hoffman - 6/9/2014</span><br />
+                    <span class="product"
+                      >Newell 322</span
+                    >
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span class="name">Brosina Hoffman - 6/9/2014</span><br />
+                    <span class="product"
+                      >DXL Angle-View Binders with Locking Rings by Samsill</span
+                    >
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span class="name">Brosina Hoffman - 6/9/2014</span><br />
+                    <span class="product"
+                      >Belkin F5C206VTEL 6 Outlet Surge2</span
+                    >
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span class="name">Brosina Hoffman - 6/9/2014</span><br />
+                    <span class="product"
+                      >Chromcraft Rectangular Conference Tables</span
+                    >
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span class="name">Brosina Hoffman - 6/9/2014</span><br />
+                    <span class="product"
+                      >Konftel 250 Conference phone - Charcoal black</span
+                    >
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span class="name">Andrew Allen - 4/15/2017</span><br />
+                    <span class="product"
+                      >Xerox 1967Irene </span
+                    >
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span class="name">Maddox - 12/5/2016</span><br />
+                    <span class="product"
+                      >Fellowes PB200 Plastic Comb Binding Machine</span
+                    >
+                  </a>
+                </li>
               </ul>
             </div>
           </div>
@@ -257,23 +314,112 @@
         <div class="bottom2">
           <div class="report1">
             <div class="head">
-              <img src="shopping-cart.png" />
+              <i class='bx bx-cart-alt' ></i>
               <div class="content">
                 <div class="box-topic">Reports</div>
                 <div class="description">Top Selling Product</div>
               </div>
             </div>
-            <img class="doc" src="Top selling.png" />
+            <div class="tableTopSelling"></div>
+            <script>
+              fetch('/data/topSelling.json', {
+                method: 'GET'
+              })
+              .then(response => response.json())
+              .then(json => {
+                const data = json; // Assuming json is an array of objects
+
+                // Create a table
+                const table = document.createElement('table');
+                table.border = '1';
+
+                // Create table header
+                const thead = document.createElement('thead');
+                const headerRow = document.createElement('tr');
+
+                // Assuming each object in the array has the same keys
+                const keys = Object.keys(data[0]);
+                keys.forEach(key => {
+                  const th = document.createElement('th');
+                  th.textContent = key;
+                  headerRow.appendChild(th);
+                });
+                thead.appendChild(headerRow);
+                table.appendChild(thead);
+
+                // Create table body
+                const tbody = document.createElement('tbody');
+                data.forEach(item => {
+                  const row = document.createElement('tr');
+                  keys.forEach(key => {
+                    const td = document.createElement('td');
+                    td.textContent = item[key];
+                    row.appendChild(td);
+                  });
+                  tbody.appendChild(row);
+                });
+                table.appendChild(tbody);
+
+                // Append table to the div with class 'doc'
+                document.querySelector('.tableTopSelling').appendChild(table);
+              })
+              .catch(error => console.error('Fetch error:', error));
+              
+            </script>
           </div>
           <div class="report2">
             <div class="head">
-              <img src="price-tag.png" />
+              <i class='bx bx-purchase-tag-alt'></i>
               <div class="content">
                 <div class="box-topic">Reports</div>
                 <div class="description">Top Product Needs and Preferences</div>
               </div>
             </div>
-            <img class="doc" src="Top product.png" />
+            <div class="TopProductNeedsandPreferences"></div>
+            <script>
+              fetch('/data/TopProductNeedsandPreferences.json', {
+                method: 'GET'
+              })
+              .then(response => response.json())
+              .then(json => {
+                const data = json; // Assuming json is an array of objects
+
+                // Create a table
+                const table = document.createElement('table');
+                table.border = '1';
+
+                // Create table header
+                const thead = document.createElement('thead');
+                const headerRow = document.createElement('tr');
+
+                // Assuming each object in the array has the same keys
+                const keys = Object.keys(data[0]);
+                keys.forEach(key => {
+                  const th = document.createElement('th');
+                  th.textContent = key;
+                  headerRow.appendChild(th);
+                });
+                thead.appendChild(headerRow);
+                table.appendChild(thead);
+
+                // Create table body
+                const tbody = document.createElement('tbody');
+                data.forEach(item => {
+                  const row = document.createElement('tr');
+                  keys.forEach(key => {
+                    const td = document.createElement('td');
+                    td.textContent = item[key];
+                    row.appendChild(td);
+                  });
+                  tbody.appendChild(row);
+                });
+                table.appendChild(tbody);
+
+                // Append table to the div with class 'doc'
+                document.querySelector('.TopProductNeedsandPreferences').appendChild(table);
+              })
+              .catch(error => console.error('Fetch error:', error));
+            </script>
           </div>
         </div>
       </div>
