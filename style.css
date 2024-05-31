@@ -324,6 +324,7 @@ td {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   margin-left: 20px;
   display: block;
+  margin-bottom: 20px;
 }
 
 .bottom2 .report2 {
@@ -336,68 +337,103 @@ td {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   margin-left: 20px;
   display: block;
+  margin-bottom: 20px;
 }
 .head {
   display: flex;
+  margin: 20px 0;
 }
-.head i{
+.head i {
   font-size: 50px;
 }
 .bottom2 .doc {
   width: 90%;
 }
 /* topSelling */
-.bottom2 .tableTopSelling table,
-.bottom2 .TopProductNeedsandPreferences table{
-  width: 100%;
-  border-collapse: collapse;
-  margin: 20px 0
-  scr
-}
-
-.bottom2 .tableTopSelling th, .bottom2 .tableTopSelling td,
-.bottom2 .TopProductNeedsandPreferences th, .bottom2 .TopProductNeedsandPreferences td{
-  font-size: 10px;
-  padding: 15px;
-  border: 1px solid #ddd;
-}
-.bottom2 .tableTopSelling th,
-.bottom2 .TopProductNeedsandPreferences th {
-  background-color: #f2f2f2;
-}
-.bottom2 .tableTopSelling tbody,
-.bottom2 .TopProductNeedsandPreferences tbody {
-  display: block;
-  max-height: 300px; /* Adjust this value as needed */
-  overflow-x: scroll;
+.tableTopSelling,
+.TopProductNeedsandPreferences {
+  max-height: 280px;
+  min-height: 280px;
   overflow-y: scroll;
 }
-.bottom2 .tableTopSelling tbody tr,
-.bottom2 .TopProductNeedsandPreferences tbody tr {
-  display: table;
+
+.tableTopSelling table,
+.TopProductNeedsandPreferences table {
   width: 100%;
+  border-collapse: collapse;
   table-layout: fixed;
 }
-.bottom2 .tableTopSelling thead, .bottom2 .tableTopSelling tbody tr,
-.bottom2 .TopProductNeedsandPreferences thead, .bottom2 .TopProductNeedsandPreferences tbody tr {
-  display: table;
-  width: 100%;
-  table-layout: fixed;
+.tableTopSelling th,
+.tableTopSelling td,
+.TopProductNeedsandPreferences th,
+.TopProductNeedsandPreferences td {
+  border: 1px solid #ddd;
+  padding: 15px 15px 15px 2px;
+  font-size: 10px;
 }
-.bottom2 .tableTopSelling tr:nth-child(even),
-.bottom2 .TopProductNeedsandPreferences tr:nth-child(even) {
-  background-color: #f9f9f9;
+
+.tableTopSelling tr:nth-child(even),
+.TopProductNeedsandPreferences tr:nth-child(even) {
+  background-color: #f2f2f2;
 }
-.bottom2 .tableTopSelling tr:hover,
-.bottom2 .TopProductNeedsandPreferences tr:hover {
-  background-color: #f1f1f1;
+.tableTopSelling tr:nth-child(odd),
+.TopProductNeedsandPreferences tr:nth-child(odd) {
+  background-color: #ffffff;
 }
-.bottom2 .tableTopSelling th:first-child, .bottom2 .tableTopSelling td:first-child {
-  width: 50px; /* Adjust this value as needed */
+
+.tableTopSelling tr:first-child,
+.tableTopSelling th:first-child,
+.tableTopSelling td:first-child {
+  width: 50px;
+}
+
+.tableTopSelling th,
+.TopProductNeedsandPreferences th {
+  color: #000;
+}
+
+#paginationButtons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+#paginationButtons button {
+  margin: 5px 5px 5px 0px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 8px;
+  font-weight: 500;
+}
+#paginationButtons .active {
+  background-color: #b22222;
+  color: white;
+  border: none;
+}
+
+#paginationButtons2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+#paginationButtons2 button {
+  margin: 5px 5px 5px 0px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 8px;
+  font-weight: 500;
+}
+#paginationButtons2 .active {
+  background-color: #b22222;
+  color: white;
+  border: none;
 }
 /* topSelling */
 
-.bottom2  img {
+.bottom2 img {
   width: 45px;
 }
 .bottom2 .content {
@@ -410,23 +446,20 @@ td {
 }
 
 footer {
-  background-color: #b22222; 
+  background-color: #b22222;
   color: #fff;
-  text-align: center; 
-  padding: 20px 10px; 
+  text-align: center;
+  padding: 20px 10px;
   margin-top: auto;
   overflow: hidden;
   border-left: 10px solid #efeef1;
   width: 100%;
 }
 
-
-
-
 @media (max-width: 600px) {
   footer {
-      padding: 15px 5px;
- }
+    padding: 15px 5px;
+  }
 }
 
 /* Responsive Media Query */
@@ -566,8 +599,8 @@ footer {
     left: 60px;
     width: calc(100% - 60px);
   }
-  
-  .overview-boxes2 .source{
+
+  .overview-boxes2 .source {
     display: block;
   }
 }
