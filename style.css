@@ -513,6 +513,7 @@ td {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   justify-content: space-between;
 }
+
 .overview-boxes01 .box-topic, .overview-boxes02 .boxxx {
   font-size: 20px;
 }
@@ -543,4 +544,32 @@ td {
   border-radius: 100%;
   margin-bottom: 30px;
   margin-top: 10px;
+}
+
+/*footer*/
+footer{
+  background-color: #810000;
+  margin-top: 60px;
+  width: 100%;
+  padding-left: 340px;
+  padding-top: 30px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  color: #ffff;
+  padding-bottom: 10px;
+}
+
+footer p{
+  font-size: 13px;
+  margin-bottom: 15px;
+}
+
+footer h1{
+  font-size: 28px;
+}
+
+footer h2{
+  font: 16px;
 }
