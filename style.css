@@ -409,6 +409,26 @@ td {
   font-size: 18px;
 }
 
+footer {
+  background-color: #b22222; 
+  color: #fff;
+  text-align: center; 
+  padding: 20px 10px; 
+  margin-top: auto;
+  overflow: hidden;
+  border-left: 10px solid #efeef1;
+  width: 100%;
+}
+
+
+
+
+@media (max-width: 600px) {
+  footer {
+      padding: 15px 5px;
+ }
+}
+
 /* Responsive Media Query */
 @media (max-width: 1240px) {
   .sidebar {
@@ -524,10 +544,11 @@ td {
 
 @media (max-width: 400px) {
   .sidebar {
-    width: 0;
+    width: 100%;
+    height: auto;
   }
   .sidebar.active {
-    width: 60px;
+    width: 100%;
   }
   .home-section {
     width: 100%;
@@ -544,6 +565,10 @@ td {
   .sidebar.active ~ .home-section nav {
     left: 60px;
     width: calc(100% - 60px);
+  }
+  
+  .overview-boxes2 .source{
+    display: block;
   }
 }
 

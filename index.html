@@ -17,7 +17,7 @@
       <div class="logo">
         <img src="Logo Capstone Putih.png" />
       </div>
-      <ul class="nav-links"> 
+      <ul class="nav-links">
         <li>
           <a href="#">
             <i class="bx bx-grid-alt"></i>
@@ -196,7 +196,8 @@
                   <div class="button">
                     <a
                       href="https://lookerstudio.google.com/reporting/a7b86b9d-b913-4dcf-b0a3-6ee80125297d/page/ROpvD"
-                      style="margin-top: 30px;">Open Folder</a
+                      style="margin-top: 30px"
+                      >Open Folder</a
                     >
                   </div>
                 </div>
@@ -254,16 +255,15 @@
                 <li>
                   <a href="#">
                     <span class="name">Brosina Hoffman - 6/9/2014</span><br />
-                    <span class="product"
-                      >Newell 322</span
-                    >
+                    <span class="product">Newell 322</span>
                   </a>
                 </li>
                 <li>
                   <a href="#">
                     <span class="name">Brosina Hoffman - 6/9/2014</span><br />
                     <span class="product"
-                      >DXL Angle-View Binders with Locking Rings by Samsill</span
+                      >DXL Angle-View Binders with Locking Rings by
+                      Samsill</span
                     >
                   </a>
                 </li>
@@ -294,9 +294,7 @@
                 <li>
                   <a href="#">
                     <span class="name">Andrew Allen - 4/15/2017</span><br />
-                    <span class="product"
-                      >Xerox 1967Irene </span
-                    >
+                    <span class="product">Xerox 1967Irene </span>
                   </a>
                 </li>
                 <li>
@@ -314,7 +312,7 @@
         <div class="bottom2">
           <div class="report1">
             <div class="head">
-              <i class='bx bx-cart-alt' ></i>
+              <i class="bx bx-cart-alt"></i>
               <div class="content">
                 <div class="box-topic">Reports</div>
                 <div class="description">Top Selling Product</div>
@@ -322,54 +320,53 @@
             </div>
             <div class="tableTopSelling"></div>
             <script>
-              fetch('/data/topSelling.json', {
-                method: 'GET'
+              fetch("/data/topSelling.json", {
+                method: "GET",
               })
-              .then(response => response.json())
-              .then(json => {
-                const data = json; // Assuming json is an array of objects
+                .then((response) => response.json())
+                .then((json) => {
+                  const data = json; // Assuming json is an array of objects
 
-                // Create a table
-                const table = document.createElement('table');
-                table.border = '1';
+                  // Create a table
+                  const table = document.createElement("table");
+                  table.border = "1";
 
-                // Create table header
-                const thead = document.createElement('thead');
-                const headerRow = document.createElement('tr');
+                  // Create table header
+                  const thead = document.createElement("thead");
+                  const headerRow = document.createElement("tr");
 
-                // Assuming each object in the array has the same keys
-                const keys = Object.keys(data[0]);
-                keys.forEach(key => {
-                  const th = document.createElement('th');
-                  th.textContent = key;
-                  headerRow.appendChild(th);
-                });
-                thead.appendChild(headerRow);
-                table.appendChild(thead);
-
-                // Create table body
-                const tbody = document.createElement('tbody');
-                data.forEach(item => {
-                  const row = document.createElement('tr');
-                  keys.forEach(key => {
-                    const td = document.createElement('td');
-                    td.textContent = item[key];
-                    row.appendChild(td);
+                  // Assuming each object in the array has the same keys
+                  const keys = Object.keys(data[0]);
+                  keys.forEach((key) => {
+                    const th = document.createElement("th");
+                    th.textContent = key;
+                    headerRow.appendChild(th);
                   });
-                  tbody.appendChild(row);
-                });
-                table.appendChild(tbody);
+                  thead.appendChild(headerRow);
+                  table.appendChild(thead);
 
-                // Append table to the div with class 'doc'
-                document.querySelector('.tableTopSelling').appendChild(table);
-              })
-              .catch(error => console.error('Fetch error:', error));
-              
+                  // Create table body
+                  const tbody = document.createElement("tbody");
+                  data.forEach((item) => {
+                    const row = document.createElement("tr");
+                    keys.forEach((key) => {
+                      const td = document.createElement("td");
+                      td.textContent = item[key];
+                      row.appendChild(td);
+                    });
+                    tbody.appendChild(row);
+                  });
+                  table.appendChild(tbody);
+
+                  // Append table to the div with class 'doc'
+                  document.querySelector(".tableTopSelling").appendChild(table);
+                })
+                .catch((error) => console.error("Fetch error:", error));
             </script>
           </div>
           <div class="report2">
             <div class="head">
-              <i class='bx bx-purchase-tag-alt'></i>
+              <i class="bx bx-purchase-tag-alt"></i>
               <div class="content">
                 <div class="box-topic">Reports</div>
                 <div class="description">Top Product Needs and Preferences</div>
@@ -377,52 +374,57 @@
             </div>
             <div class="TopProductNeedsandPreferences"></div>
             <script>
-              fetch('/data/TopProductNeedsandPreferences.json', {
-                method: 'GET'
+              fetch("/data/TopProductNeedsandPreferences.json", {
+                method: "GET",
               })
-              .then(response => response.json())
-              .then(json => {
-                const data = json; // Assuming json is an array of objects
+                .then((response) => response.json())
+                .then((json) => {
+                  const data = json; // Assuming json is an array of objects
 
-                // Create a table
-                const table = document.createElement('table');
-                table.border = '1';
+                  // Create a table
+                  const table = document.createElement("table");
+                  table.border = "1";
 
-                // Create table header
-                const thead = document.createElement('thead');
-                const headerRow = document.createElement('tr');
+                  // Create table header
+                  const thead = document.createElement("thead");
+                  const headerRow = document.createElement("tr");
 
-                // Assuming each object in the array has the same keys
-                const keys = Object.keys(data[0]);
-                keys.forEach(key => {
-                  const th = document.createElement('th');
-                  th.textContent = key;
-                  headerRow.appendChild(th);
-                });
-                thead.appendChild(headerRow);
-                table.appendChild(thead);
-
-                // Create table body
-                const tbody = document.createElement('tbody');
-                data.forEach(item => {
-                  const row = document.createElement('tr');
-                  keys.forEach(key => {
-                    const td = document.createElement('td');
-                    td.textContent = item[key];
-                    row.appendChild(td);
+                  // Assuming each object in the array has the same keys
+                  const keys = Object.keys(data[0]);
+                  keys.forEach((key) => {
+                    const th = document.createElement("th");
+                    th.textContent = key;
+                    headerRow.appendChild(th);
                   });
-                  tbody.appendChild(row);
-                });
-                table.appendChild(tbody);
+                  thead.appendChild(headerRow);
+                  table.appendChild(thead);
 
-                // Append table to the div with class 'doc'
-                document.querySelector('.TopProductNeedsandPreferences').appendChild(table);
-              })
-              .catch(error => console.error('Fetch error:', error));
+                  // Create table body
+                  const tbody = document.createElement("tbody");
+                  data.forEach((item) => {
+                    const row = document.createElement("tr");
+                    keys.forEach((key) => {
+                      const td = document.createElement("td");
+                      td.textContent = item[key];
+                      row.appendChild(td);
+                    });
+                    tbody.appendChild(row);
+                  });
+                  table.appendChild(tbody);
+
+                  // Append table to the div with class 'doc'
+                  document
+                    .querySelector(".TopProductNeedsandPreferences")
+                    .appendChild(table);
+                })
+                .catch((error) => console.error("Fetch error:", error));
             </script>
           </div>
         </div>
       </div>
+      <footer>
+        <p>© 2024 Thirteen Collective. All rights reserved.</p>
+      </footer>
     </section>
 
     <script>
