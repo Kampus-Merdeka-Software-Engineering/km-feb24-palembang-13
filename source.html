@@ -38,7 +38,7 @@
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="">
             <i class="bx bx-user-circle"></i>
             <span class="links_name">About Us</span>
           </a>
@@ -96,7 +96,7 @@
           <div class="bottommm">
             <div class="overview-boxes02">
               <div class="sourceee">
-                <div class="boxxx">
+                <div class="boxxx" >
                   <div class="right-sideee">
                     <div class="kaggle"><img src="source/kaggle.png" alt="" width="100" height="100"></div>
                     <div class="box-topic">Superstore Dataset</div>
@@ -107,7 +107,68 @@
                   </div>
                   <!--<i class="bx bxs-cart-download cart four"></i>-->
                 </div>
-                <div class="boxxx" >
+                <div class="boxxx2">
+                  <div class="right-sideee">
+                    <div class="right-sideee">
+                      <table>
+                          <tr>
+                              <td>Valid</td>
+                              <td>9994</td>
+                              <td>100%</td>
+                          </tr>
+                          <tr>
+                              <td>Missmatched</td>
+                              <td>0</td>
+                              <td>0%</td>
+                          </tr>
+                          <tr>
+                              <td>Missing</td>
+                              <td>0</td>
+                              <td>0%</td>
+                          </tr>
+                          <tr>
+                              <td>Mean</td>
+                              <td>5K</td>
+                              <td></td>
+                          </tr>
+                          <tr>
+                              <td>Std. Deviation</td>
+                              <td>2.89k</td>
+                              <td></td>
+                          </tr>
+                          <tr>
+                              <td>Quantiles</td>
+                              <td>1</td>
+                              <td>Min</td>
+                          </tr>
+                          <tr>
+                              <td></td>
+                              <td>2499</td>
+                              <td>25%</td>
+
+                          </tr>
+                          <tr>
+                              <td></td>
+                              <td>4998</td>
+                              <td>50%</td>
+                          </tr>
+                          <tr>
+                              <td></td>
+                              <td>7496</td>
+                              <td>75%</td>
+                          </tr>
+                          <tr>
+                              <td></td>
+                              <td>9994</td>
+                              <td>Max</td>
+                          </tr>
+                          
+                      </table>
+                  </div>
+                  </div>
+                  <!--<i class="bx bxs-cart-download cart four"></i>-->
+                </div>
+                <div class="boxxx2" >
                   <div class="right-sideee">
                     <canvas id="myChart" width="380" height="260"></canvas>
                     <script>
@@ -40114,12 +40175,12 @@ var myChart = new Chart(ctx, {
             label: 'Unique ID for each row',
             data: data,
             backgroundColor: [
-                'rgb(226, 226, 226)', // Warna Pink (RGB: 255, 192, 203)
-                'rgb(226, 226, 226)', // Warna Pink (RGB: 255, 192, 203)
+                'rgb(238, 226, 216)', // Warna Pink (RGB: 255, 192, 203)
+                'rgb(238, 226, 216)', // Warna Pink (RGB: 255, 192, 203)
             ],
             borderColor: [
-                'rgb(255, 255, 255)',
-                'rgb(255, 255, 255)',
+                'rgb(238, 226, 216)',
+                'rgb(238, 226, 216)',
             ],
             borderWidth: 1,
         }] 
@@ -40130,13 +40191,13 @@ var myChart = new Chart(ctx, {
                 beginAtZero: true,
                 ticks: {
                     // Mengatur warna label sumbu y menjadi putih
-                    color: 'white'
+                    color: 'black'
                 }
             },
             x: {
                 ticks: {
                     // Mengatur warna label sumbu x menjadi putih
-                    color: 'white'
+                    color: 'black'
                 }
             }
         },
@@ -40144,7 +40205,7 @@ var myChart = new Chart(ctx, {
             legend: {
                 labels: {
                     // Mengatur warna teks pada label "Jumlah Row ID" menjadi putih
-                    color: 'white'
+                    color: 'black'
                 }
             }
         }
@@ -40152,8 +40213,10 @@ var myChart = new Chart(ctx, {
 });
 
                     </script>
+
                     </div>
                   </div>
+                  
                 </div>
                 
                 </div>

@@ -482,8 +482,10 @@ td {
   display: block;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
+
   padding: 20px;
-  width: 67.5%;
+  width: 100%;
   margin-bottom: 26px;
 }
 .overview-boxes01 .boxxx{
@@ -505,13 +507,24 @@ td {
 .overview-boxes02 .sourceee .boxxx {
   display: flex;
   align-items: center;
-  width: calc(100% / 2 - 11px );
+  justify-content: space-between;
+  width: calc(100% / 3 - 15px );
   background: #AB0319;
   color: #fff;
   padding: 15px 14px;
   border-radius: 26px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+.overview-boxes02 .sourceee .boxxx2 {
+  display: flex;
+  align-items: center;
   justify-content: space-between;
+  width: calc(100% / 3 - 15px );
+  background: #cecece;
+  color: #ffffff;
+  padding: 15px 14px;
+  border-radius: 26px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 
 .overview-boxes01 .box-topic, .overview-boxes02 .boxxx {
@@ -546,30 +559,29 @@ td {
   margin-top: 10px;
 }
 
-/*footer*/
-footer{
-  background-color: #810000;
-  margin-top: 60px;
-  width: 100%;
-  padding-left: 340px;
-  padding-top: 30px;
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  z-index: 1;
-  color: #ffff;
-  padding-bottom: 10px;
+/* table */
+.right-sideee table {
+  width: 228%;
+  border-collapse: collapse;
 }
 
-footer p{
-  font-size: 13px;
-  margin-bottom: 15px;
+.right-sideee td {
+  padding: 2px;
+  border: 0px solid #ddd;
+  font-size: 85%;
 }
 
-footer h1{
-  font-size: 28px;
+/* Untuk mengatur agar sel pada kolom 2 dan 3 berada di tengah */
+.right-sideee td:nth-child(2),
+.right-sideee td:nth-child(3) {
+  text-align: center;
 }
-
-footer h2{
-  font: 16px;
+.right-sideee td:nth-child(1) {
+  color: black;
+}
+.right-sideee td:nth-child(2) {
+  color: black;
+}
+.right-sideee td:nth-child(3) {
+  color: #717171;
 }
