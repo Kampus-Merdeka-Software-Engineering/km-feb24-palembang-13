@@ -127,6 +127,7 @@ nav .sidebar-button i {
 
 .about-us-section {
   padding: 20px;
+  justify-content: center;
 }
 
 .about-header h2 {
