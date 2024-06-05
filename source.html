@@ -93,6 +93,7 @@
             </div>
           </div>
   
+
           <div class="bottommm">
             <div class="overview-boxes02">
               <div class="sourceee">
@@ -165,13 +166,13 @@
                           
                       </table>
                   </div>
-                  </div>
+                    </div>
                   <!--<i class="bx bxs-cart-download cart four"></i>-->
                 </div>
-                <div class="boxxx2" >
-                  <div class="right-sideee">
+                  <div class="boxxx2" >
+                   <div class="right-sideee">
                     <canvas id="myChart" width="380" height="260"></canvas>
-                    <script>
+                      <script>
                         // Data JSON
                         var jsonData = [
   {
@@ -40167,59 +40168,56 @@
         
                         // Membuat diagram batang
                         var ctx = document.getElementById('myChart').getContext('2d');
-var myChart = new Chart(ctx, {
-    type: 'bar',
-    data: {
-        labels: labels,
-        datasets: [{
-            label: 'Unique ID for each row',
-            data: data,
-            backgroundColor: [
-                'rgb(238, 226, 216)', // Warna Pink (RGB: 255, 192, 203)
-                'rgb(238, 226, 216)', // Warna Pink (RGB: 255, 192, 203)
-            ],
-            borderColor: [
-                'rgb(238, 226, 216)',
-                'rgb(238, 226, 216)',
-            ],
-            borderWidth: 1,
-        }] 
-    },
-    options: {
-        scales: {
-            y: {
-                beginAtZero: true,
-                ticks: {
-                    // Mengatur warna label sumbu y menjadi putih
-                    color: 'black'
-                }
-            },
-            x: {
-                ticks: {
-                    // Mengatur warna label sumbu x menjadi putih
-                    color: 'black'
-                }
-            }
-        },
-        plugins: {
-            legend: {
-                labels: {
-                    // Mengatur warna teks pada label "Jumlah Row ID" menjadi putih
-                    color: 'black'
-                }
-            }
-        }
-    }
-});
+                        var myChart = new Chart(ctx, {
+                            type: 'bar',
+                            data: {
+                                labels: labels,
+                                datasets: [{
+                                    label: 'Unique ID for each row',
+                                    data: data,
+                                    backgroundColor: [
+                                        'rgb(238, 226, 216)', // Warna milktea (RGB: 255, 192, 203)
+                                        'rgb(238, 226, 216)', // Warna milktea (RGB: 255, 192, 203)
+                                    ],
+                                    borderColor: [
+                                        'rgb(238, 226, 216)', 
+                                        'rgb(238, 226, 216)',
+                                    ],
+                                    borderWidth: 1,
+                                }] 
+                            },
+                            options: {
+                                scales: {
+                                    y: {
+                                        beginAtZero: true,
+                                        ticks: {
+                                            // Mengatur warna label sumbu y menjadi putih
+                                            color: 'black'
+                                        }
+                                    },
+                                    x: {
+                                        ticks: {
+                                            // Mengatur warna label sumbu x menjadi putih
+                                            color: 'black'
+                                        }
+                                    }
+                                },
+                                plugins: {
+                                    legend: {
+                                        labels: {
+                                            // Mengatur warna teks pada label "Jumlah Row ID" menjadi putih
+                                            color: 'black'
+                                        }
+                                    }
+                                }
+                            }
+                        });
 
                     </script>
-
                     </div>
                   </div>
-                  
                 </div>
-                
-                </div>
+              </div>
     </section>
 
     <script>
