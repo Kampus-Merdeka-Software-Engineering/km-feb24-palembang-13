@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>STATISTICAL</title>
-  <link rel="stylesheet" href="stat berkotak.css">
+  <link rel="stylesheet" href="style1.css">
   <!-- Boxicons CDN Link -->
   <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
   <!-- Google Charts API -->
@@ -45,10 +45,15 @@
       </li>
     </ul>
   </div>
-
-  <header>
-    <h1 class="Statistical">STATISTICAL</h1>
-  </header>
+  
+  <section class="home-section">
+    <nav>
+    <div class="sidebar-button">
+      <i class="bx bx-menu sidebarBtn"></i>
+      <span class="dashboard">Statistical</span>
+    </div>
+  </nav>
+  </section>
 
   <main class="content">
     <section class="dashboard-topprofit">
@@ -210,11 +215,9 @@
     <!--interpretasi avg profit-->
     <section class="avg-profit">
       <div class="kotak-int1">
-        <div>
+        <div class="linechart2">
           <h3 class="heading-int-avgprofit">Average Profit by Year</h3>
-          <div class="linechart2">
             <div id="curve_chart2" style="width: 100%; height: 291px"></div>
-          </div>
         </div>
       </div>
       <div class="kotak-int1">
@@ -275,7 +278,7 @@
       <div class="kotak-int3">
         <h1 class="heading-int-dlv">Average Delivery Times by Category</h1>
         <div class="barchart-dlv2">
-          <div id="barchart_material2" style="width: 100%; height: 293px"></div>
+          <div id="barchart_material2" style="width: 100%; height: 330px;"></div>
         </div>
       </div>
       <div class="kotak-int3">
@@ -404,13 +407,12 @@
 
       </div>
     </section>
+    <footer>
+        <p>© 2024 Thirteen Collective. All rights reserved.</p>
+      </footer>
   </main>
 
-  <footer>
-    <p>@Copyright</p>
-    <h1>Section Palembang</h1>
-    <h2>Team 13</h2>
-  </footer>
+  
 
   <script src="stat berkotak.js"></script>
   <script src="script.js"></script>
